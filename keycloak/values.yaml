@@ -1,0 +1,12 @@
+#auth:
+#  adminUser: "admin"
+#  adminPassword: "password"
+
+#proxyHeaders: "xforwarded"
+proxyHeaders: "forwarded"
+
+extraEnvVars:
+  - name: KC_BOOTSTRAP_ADMIN_USERNAME
+    value: "admin"
+  - name: KC_BOOTSTRAP_ADMIN_PASSWORD
+    value: "password"
