@@ -1,2 +1,2 @@
-# poc-k8s-deployment
-PoC minikube Deployments
+# Description
+PoC minikube Deployments locally to be used from Internet
