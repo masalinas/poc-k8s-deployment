@@ -1,19 +1,22 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: poc-keycloak-angular
+  #name: poc-keycloak-angular
+  name: poc-k8s-keycloak-angular-chart-ingress
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$2 
 spec:
   rules:
-    - host: k8s.oferto.io
+    #- host: k8s.oferto.io
+    - host: poc-k8s-keycloak-angular-chart.192.168.59.102.nip.io 
       http:
         paths:
           - path: /keycloak-angular(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
               service:
-                name: poc-keycloak-angular
+                #name: poc-keycloak-angular
+                name: poc-k8s-keycloak-angular-poc-k8s-keycloak-angular-chart
                 port:
                   number: 80
